@@ -66,13 +66,13 @@ printf "  \e[0m\e[0;36m  City          \e[0m\e[0;36m:\e[0m\e[0;36m   $mycity\e[0
 printf "  \e[0m\e[0;36m  Region        \e[0m\e[0;36m:\e[0m\e[0;36m   $myregion\e[0m\n"
 printf "  \e[0m\e[0;36m  Country       \e[0m\e[0;36m:\e[0m\e[0;36m   $mycountry\e[0m\n"
 printf "\e[0m\n"
-printf "  \e[0m\e[0;36m  Latitude      \e[0m\e[0;36m:\e[0m\e[0;92m    $mylat\e[0m\n"
-printf "  \e[0m\e[0;36m  Longitude     \e[0m\e[0;36m:\e[0m\e[0;92m    $mylon\e[0m\n"
-printf "  \e[0m\e[0;36m  Time Zone     \e[0m\e[0;36m:\e[0m\e[0;92m    $mytime\e[0m\n"
-printf "  \e[0m\e[0;36m  Postal Code   \e[0m\e[0;36m:\e[0m\e[0;92m    $mypostal\e[0m\n"
+printf "  \e[0m\e[0;36m  Latitude      \e[0m\e[0;36m:\e[0m\e[0;36m    $mylat\e[0m\n"
+printf "  \e[0m\e[0;36m  Longitude     \e[0m\e[0;36m:\e[0m\e[0;36m    $mylon\e[0m\n"
+printf "  \e[0m\e[0;36m  Time Zone     \e[0m\e[0;36m:\e[0m\e[0;36m    $mytime\e[0m\n"
+printf "  \e[0m\e[0;36m  Postal Code   \e[0m\e[0;36m:\e[0m\e[0;36m    $mypostal\e[0m\n"
 printf "\e[0m\n"
-printf "  \e[0m\e[0;36m  ISP           \e[0m\e[0;36m:\e[0m\e[0;92m   $myisp\e[0m\n"
-printf "  \e[0m\e[0;36m  ASN           \e[0m\e[0;36m:\e[0m\e[0;92m   $myasn\e[0m\n"
+printf "  \e[0m\e[0;36m  ISP           \e[0m\e[0;36m:\e[0m\e[0;36m   $myisp\e[0m\n"
+printf "  \e[0m\e[0;36m  ASN           \e[0m\e[0;36m:\e[0m\e[0;36m   $myasn\e[0m\n"
 printf "\e[0m\n"
 printf "  \e[0m\e[0;36m  Country Code  \e[0m\e[0;36m:\e[0m\e[0;36m   $mycountrycode\e[0m\n"
 printf "  \e[0m\e[0;36m  Currency      \e[0m\e[0;36m:\e[0m\e[0;36m   $mycurrency\e[0m\n"
@@ -82,10 +82,10 @@ printf "\e[0m\n"
 printf "  \e[0m\e[0;36m  GOOGLE Maps   \e[0m\e[0;36m:\e[0m\e[0;36m  https://maps.google.com/?q=$mylat,$mylon\e[0m\n"
 sleep 5
 printf "\e[0m\n"
-printf "  \e[0m\e[1;91m[\e[0m\e[1;97m01\e[0m\e[1;91m]\e[0m\e[1;93m Return To Main Menu\e[0m\n"
-printf "  \e[0m\e[1;91m[\e[0m\e[1;97m02\e[0m\e[1;91m]\e[0m\e[1;93m Exit\e[0m\n"
+printf "  \e[0m\e[0;36m[\e[0m\e[0;36m01\e[0m\e[0;36m]\e[0m\e[0;36m Return To Main Menu\e[0m\n"
+printf "  \e[0m\e[0;36m[\e[0m\e[0;36m02\e[0m\e[0;36m]\e[0m\e[0;36m Exit\e[0m\n"
 printf "\e[0m\n"
-read -p $'  \e[1;31m>>\e[0m\e[1;96m  \en' mainorexit1
+read -p $'  \e[0;36m>>\e[0m\e[0;36m  \en' mainorexit1
 
 if [[ $mainorexit1 == 1 || $mainorexit1 == 01 ]]; then
 banner
@@ -110,7 +110,7 @@ banner
 printf "\e[0m\n"
 printf "\e[0m\n"
 printf "\e[0m\n"
-read -p $'  \e[0;36m[\e[0m\e[0;36m~\e[0m\e[0;36m]\e[0m\e[0;36m Input IP Address \e[0m\e[0;36m: \e[0m\e[0;37m\en' useripaddress
+read -p $'  \e[0;36m[\e[0m\e[0;36m~\e[0m\e[0;36m]\e[0m\e[0;36m Input IP Address \e[0m\e[0;36m: \e[0m\e[0;36m\en' useripaddress
 
 ipaddripapico=$(curl -s "https://ipapi.co/$useripaddress/json" -L)
 ipaddripapicom=$(curl -s "http://ip-api.com/json/$useripaddress" -L)
